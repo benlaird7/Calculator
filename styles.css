@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-    background-color: rgb(112, 156, 250);
+    background-color: #3B0404;
 }
 
 .container {
@@ -25,23 +25,14 @@ body {
 }
 
 .calculator {
-    height: 460px;
+    height: 475px;
     width: 350px;
-    border: 5px solid black;
+    border: 10px solid #F0E4CE;
     max-width: 50%;
     max-width: 1000px;
     min-width: 350px;
-    background-color: grey;
-    
-}
-
-.display {
-    width: 100%;
-    height: 100px;
-    background-color: #F7CAC9;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
+    background-color: #E2C5A8;
+    border-radius: 10px;
 }
 
 .btn-container {
@@ -52,21 +43,12 @@ body {
     padding-left: 5px;
 }
 
-button {
-    width: 80px;
-    height: 60px;
-    font-size: 30px;
-    border: 1px solid black;
-}
-
-button:hover {
-    background-color: cornflowerblue;
-    cursor: pointer;
-}
-
 .display {
+    height: 100px;
+    width: 100%;
     grid-column: 1 / -1;
-    background-color: white;
+    background-color: #F0E4CE;
+    border: 5px solid #F49586;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -74,49 +56,94 @@ button:hover {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    border-radius: 8px;
 }
 
 .display .answer {
     font-size: 2.5rem;
+    color: #F49586
 }
 
 .display .sum {
     font-size: 1.5rem;
+    color: #F49586
 }
 
 .clear {
-    width: 50%;
-    height: 51px;
-    background-color: red;
-    color: white;
+    width: 45%;
+    height: 50px;
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15px;
 }
 
 .delete {
-    width: 50%;
-    height: 51px;
-    background-color: red;
-    color: white;
+    width: 45%;
+    height: 50px;
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     float: right;
+    margin-right: 15px;
 }
 
-.clear:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
+button {
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
     cursor: pointer;
+    font-size: 22px;
+    letter-spacing: 4px;
+    position: relative;
+    background-color: #F49586;
+    border: none;
+    color: #F0E4CE;
+    padding: 20px;
+    width: 75px;
+    text-align: center;
+    transition-duration: 0.8s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #A1C9D7;
+    border-radius: 4px;
 }
 
-.delete:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    cursor: pointer;
+button:hover {
+    background: #F0E4CE;
+    box-shadow: 0px 2px 10px 5px #A1C9D7;
+    color: #F49586;
+}
+
+button:after {
+    content: "";
+    background: #A1C9D7;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1.2s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+button:focus { outline:0; }
+
+footer {
+    text-align: center;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #A1C9D7;
 }
